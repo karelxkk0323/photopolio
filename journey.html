@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Journey | 김영서 성장 포트폴리오</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="journey.js"></script>
+  <style>
+    .journey-list { max-width: 700px; margin: 0 auto 48px auto; padding: 0 16px; }
+    .journey-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 28px 24px 20px 24px;
+      margin-bottom: 28px;
+      text-align: left;
+      transition: box-shadow 0.2s;
+    }
+    .journey-card:hover { box-shadow: 0 6px 24px rgba(255,102,0,0.10); }
+    .journey-date { color: #ff6600; font-weight: 700; margin-bottom: 6px; }
+    .journey-title { font-size: 1.15em; font-weight: bold; margin-bottom: 8px; color: #222; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">YS<span style="color:#222;font-weight:400;">.Portfolio</span></div>
+    <button class="navbar-toggle" aria-label="메뉴 열기">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect y="5" width="28" height="3" rx="1.5" fill="#222"/>
+        <rect y="12.5" width="28" height="3" rx="1.5" fill="#222"/>
+        <rect y="20" width="28" height="3" rx="1.5" fill="#222"/>
+      </svg>
+    </button>
+    <div class="menu">
+      <a href="about.html">About</a>
+      <a href="journey.html">Journey</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <section class="hero" style="min-height:220px;">
+    <div class="hero-content">
+      <div class="hero-title">나의 공부 기록</div>
+      <div class="hero-desc">성장하는 과정을 날짜별로 기록합니다.</div>
+    </div>
+  </section>
+  <main class="journey-list" id="journey-list"></main>
+  <script>
+    // journey.js의 journeyData를 사용해 기록을 동적으로 렌더링
+    const list = document.getElementById('journey-list');
+    journeyData.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'journey-card';
+      card.innerHTML = `
+        <div class="journey-date">${item.date}</div>
+        <div class="journey-title">${item.title}</div>
+        <div class="journey-content">${item.content}</div>
+      `;
+      list.appendChild(card);
+    });
+  </script>
+</body>
+</html> 
