@@ -143,6 +143,15 @@ nav.navbar {
   transform: translateY(40px);
   animation: heroFadeIn 1.1s 0.5s cubic-bezier(.4,0,.2,1) forwards;
 }
+.city-bg-svg {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 110px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.95;
+}
 
 /* 카드/섹션 */
 .card, .journey-card, .main-card {
@@ -235,19 +244,7 @@ p { line-height: 1.7; margin-top: 0.5em; margin-bottom: 0.5em; }
   .navbar .menu a:last-child {
     border-bottom: none;
   }
-  .navbar-toggle {
-    display: flex;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    width: 36px;
-    height: 36px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 120;
-  }
+
   .navbar {
     padding-right: 8px;
     position: relative;
