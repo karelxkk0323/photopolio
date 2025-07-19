@@ -25,7 +25,9 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">YS<span style="color:#222;font-weight:400;">.Portfolio</span></div>
+    <a href="index.html" class="logo" style="text-decoration:none;">
+      YS<span style="color:#222;font-weight:400;">.Portfolio</span>
+    </a>
     <div class="menu">
       <a href="about.html">정보</a>
       <a href="journey.html">공부기록</a>
@@ -40,6 +42,9 @@
     </div>
   </section>
   <main class="journey-list" id="journey-list"></main>
+  <footer style="width:100%;text-align:center;padding:24px 0 18px 0;font-size:0.98em;color:#888;letter-spacing:0.01em;">
+    All rights reserved by Youngseo Kim.
+  </footer>
   <script>
     // journey.js의 journeyData를 사용해 기록을 동적으로 렌더링
     const list = document.getElementById('journey-list');
