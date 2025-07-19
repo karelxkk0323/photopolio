@@ -226,9 +226,6 @@ p { line-height: 1.7; margin-top: 0.5em; margin-bottom: 0.5em; }
   .navbar .menu.show {
     display: flex;
   }
-  .navbar .menu.show ~ .navbar-toggle {
-    display: none !important;
-  }
   .navbar .menu a {
     width: 33.33%;
     text-align: center;
